@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>3D Cube Preloader</title>
+     <style>
+          /* Preloader CSS */
+          .preloader {
+               width: 50px;
+               height: 50px;
+               position: relative;
+               transform-style: preserve-3d;
+               margin: 0 auto;
+               height: 100vh;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               animation: rotateCube 2s infinite ease-in-out;
+          }
+
+          .side {
+               position: absolute;
+               width: 50px;
+               height: 50px;
+               background-color: #3498db;
+               opacity: 0.9;
+          }
+
+          .side:nth-child(1) {
+               transform: rotateX(0deg) translateZ(25px);
+          }
+
+          .side:nth-child(2) {
+               transform: rotateX(90deg) translateZ(25px);
+          }
+
+          .side:nth-child(3) {
+               transform: rotateX(180deg) translateZ(25px);
+          }
+
+          .side:nth-child(4) {
+               transform: rotateX(-90deg) translateZ(25px);
+          }
+
+          .side:nth-child(5) {
+               transform: rotateY(90deg) translateZ(25px);
+          }
+
+          .side:nth-child(6) {
+               transform: rotateY(-90deg) translateZ(25px);
+          }
+
+          @keyframes rotateCube {
+               0% {
+                    transform: rotateX(0deg) rotateY(0deg);
+               }
+
+               100% {
+                    transform: rotateX(360deg) rotateY(360deg);
+               }
+          }
+
+          /* Hide main content initially */
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader">
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+          <div class="side"></div>
+     </div>
+
+     <!-- Main Content -->
+     <div id="main-content">
+          <h1>Welcome to My Website</h1>
+          <p>Content is now loaded.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>

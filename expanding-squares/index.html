@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Expanding Squares Preloader</title>
+     <style>
+          .preloader {
+               display: flex;
+               justify-content: space-between;
+               width: 60px;
+               margin: 100px auto;
+               /* Center the preloader horizontally */
+          }
+
+          .square {
+               width: 10px;
+               height: 10px;
+               background-color: #3498db;
+               animation: expand 1s ease-in-out infinite;
+          }
+
+          .square:nth-child(2) {
+               animation-delay: 0.2s;
+          }
+
+          .square:nth-child(3) {
+               animation-delay: 0.4s;
+          }
+
+          @keyframes expand {
+
+               0%,
+               100% {
+                    transform: scale(1);
+               }
+
+               50% {
+                    transform: scale(1.5);
+               }
+          }
+
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+     </div>
+
+     <div id="main-content">
+          <!-- Main content goes here -->
+          <h1>Welcome to My Website</h1>
+          <p>Content is now loaded.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>

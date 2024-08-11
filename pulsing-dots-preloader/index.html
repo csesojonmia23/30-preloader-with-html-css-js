@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Pulsing Dots Preloader</title>
+     <style>
+          .preloader {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 100px;
+               height: 30px;
+          }
+
+          .dot {
+               width: 10px;
+               height: 10px;
+               background-color: #3498db;
+               border-radius: 50%;
+               margin: 0 5px;
+               animation: pulse 1.5s infinite ease-in-out;
+          }
+
+          .dot:nth-child(2) {
+               animation-delay: 0.3s;
+          }
+
+          .dot:nth-child(3) {
+               animation-delay: 0.6s;
+          }
+
+          @keyframes pulse {
+
+               0%,
+               100% {
+                    transform: scale(1);
+                    opacity: 1;
+               }
+
+               50% {
+                    transform: scale(1.5);
+                    opacity: 0.5;
+               }
+          }
+
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+     </div>
+
+     <!-- Main Content -->
+     <div id="main-content">
+          <h1>Welcome!</h1>
+          <p>The content is now available.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>

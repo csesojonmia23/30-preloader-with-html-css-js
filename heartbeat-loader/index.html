@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Heartbeat Preloader</title>
+     <style>
+          /* Preloader CSS */
+          .preloader {
+               width: 50px;
+               height: 50px;
+               background-color: #3498db;
+               border-radius: 50%;
+               animation: heartbeat 1.5s infinite ease-in-out;
+               margin: 0 auto;
+               /* Center the preloader */
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               /* Center in the viewport */
+          }
+
+          @keyframes heartbeat {
+
+               0%,
+               100% {
+                    transform: scale(1);
+               }
+
+               50% {
+                    transform: scale(1.2);
+               }
+          }
+
+          /* Hide main content initially */
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader"></div>
+
+     <!-- Main Content -->
+     <div id="main-content">
+          <h1>Welcome to My Website</h1>
+          <p>Content is now loaded.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sliding Background Preloader</title>
+     <style>
+          /* Preloader CSS */
+          .preloader {
+               font-family: 'Arial', sans-serif;
+               font-size: 24px;
+               color: white;
+               display: inline-block;
+               position: relative;
+               background: linear-gradient(90deg, #3498db, #2980b9, #3498db);
+               background-size: 200% auto;
+               animation: slideBg 2s infinite linear;
+               padding: 10px 20px;
+               border-radius: 5px;
+               margin: 0 auto;
+               /* Center the preloader */
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               /* Center in the viewport */
+          }
+
+          @keyframes slideBg {
+               0% {
+                    background-position: 0% 0%;
+               }
+
+               100% {
+                    background-position: 100% 0%;
+               }
+          }
+
+          /* Hide main content initially */
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader">Loading...</div>
+
+     <!-- Main Content -->
+     <div id="main-content">
+          <h1>Welcome to My Website</h1>
+          <p>Content is now loaded.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>

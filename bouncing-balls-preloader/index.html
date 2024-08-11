@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Bouncing Balls Preloader</title>
+     <style>
+          .preloader {
+               display: flex;
+               justify-content: center;
+               align-items: flex-end;
+               width: 100px;
+               height: 60px;
+          }
+
+          .ball {
+               width: 15px;
+               height: 15px;
+               background-color: #3498db;
+               border-radius: 50%;
+               margin: 0 5px;
+               animation: bounce 1s infinite ease-in-out;
+          }
+
+          .ball:nth-child(2) {
+               animation-delay: 0.2s;
+          }
+
+          .ball:nth-child(3) {
+               animation-delay: 0.4s;
+          }
+
+          @keyframes bounce {
+
+               0%,
+               100% {
+                    transform: translateY(0);
+               }
+
+               50% {
+                    transform: translateY(-20px);
+               }
+          }
+
+          #main-content {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+
+     <!-- Preloader -->
+     <div class="preloader">
+          <div class="ball"></div>
+          <div class="ball"></div>
+          <div class="ball"></div>
+     </div>
+
+     <!-- Main Content -->
+     <div id="main-content">
+          <h1>Welcome!</h1>
+          <p>Content is ready to view.</p>
+     </div>
+
+     <!-- JavaScript to hide preloader and show content -->
+     <!-- <script>
+          window.addEventListener('load', function () {
+               document.querySelector('.preloader').style.display = 'none';
+               document.getElementById('main-content').style.display = 'block';
+          });
+     </script> -->
+
+</body>
+
+</html>
