@@ -30,10 +30,7 @@ A collection of 30 unique preloader animations developed using HTML, CSS, and Ja
 
 ## Customization
 
-You can customize the appearance of the preloader by modifying the CSS:
-
-- **Dot Color**: Change the `background-color` property of the `.dot` class.
-- **Animation Speed**: Adjust the `animation` duration in the `.dot` class.
+You can customize the appearance of the preloader by modifying HTML, CSS and JavaScropt:
 
 ## Contributing
 
